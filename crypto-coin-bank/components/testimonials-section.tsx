@@ -5,30 +5,31 @@ import Image from "next/image";
 export default function TestimonialsSection() {
     return (
         <section
-            className="bg-cover bg-center bg-no-repeat lg:h-[800px] lg:w-full"
+            className="bg-[#F7F6FE] bg-cover bg-center bg-no-repeat lg:h-[800px] lg:w-full"
             style={{
                 backgroundImage: `url('${N.src}')`,
             }}
         >
-
             <div className="max-w-7xl mx-auto py-12 px-4 space-y-16">
+                {/* Title Section */}
                 <div className="flex flex-col items-center justify-center text-center space-y-6 w-full">
                     <p className="text-orange-500 font-medium tracking-wide">TESTIMONIALS</p>
-                    <h2 className="text-3xl font-bold">Trusted by more than 100K+ people</h2>
-                    <p className="text-[#717184] text-sm">
+                    <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">Trusted by more than 100K+ people</h2>
+                    <p className="text-[#717184] text-sm sm:text-base lg:text-lg">
                         Hear what they say about us and why you should choose Coinbank
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-6">
+                {/* Testimonials */}
+                <div className="flex flex-col lg:flex-row items-start p-0 gap-8 lg:w-[1120px] lg:h-[334px] z-[2]">
                     {/* Testimonial Card 1 */}
-                    <div className="flex flex-col items-center p-12 gap-6 bg-white rounded-2xl shadow-lg w-[352px] h-[334px]">
+                    <div className="flex flex-col items-center p-12 gap-6 bg-white rounded-2xl shadow-lg w-full sm:w-[352px] h-auto">
                         <div className="flex gap-1">
                             {[...Array(5)].map((_, i) => (
                                 <Star key={i} className="w-5 h-5 fill-orange-500 stroke-orange-500" />
                             ))}
                         </div>
-                        <p className="text-center text-sm leading-relaxed">
+                        <p className="text-center text-sm sm:text-base leading-relaxed">
                             "Cool crypto currency, fast withdrawals and deposits, way better than any wallet."
                         </p>
                         <div className="flex items-center gap-3">
@@ -41,13 +42,13 @@ export default function TestimonialsSection() {
                     </div>
 
                     {/* Testimonial Card 2 */}
-                    <div className="flex flex-col items-center p-12 gap-6 bg-white rounded-2xl shadow-lg w-[352px] h-[334px]">
+                    <div className="flex flex-col items-center p-12 gap-6 bg-white rounded-2xl shadow-lg w-full sm:w-[352px] h-auto">
                         <div className="flex gap-1">
                             {[...Array(5)].map((_, i) => (
                                 <Star key={i} className="w-5 h-5 fill-orange-500 stroke-orange-500" />
                             ))}
                         </div>
-                        <p className="text-center text-sm leading-relaxed">
+                        <p className="text-center text-sm sm:text-base leading-relaxed">
                             "It's worth it, very intuitive and easy to learn about cryptocurrencies."
                         </p>
                         <div className="flex items-center gap-3">
@@ -60,13 +61,13 @@ export default function TestimonialsSection() {
                     </div>
 
                     {/* Testimonial Card 3 */}
-                    <div className="flex flex-col items-center p-12 gap-6 bg-white rounded-2xl shadow-lg w-[352px] h-[334px]">
+                    <div className="flex flex-col items-center p-12 gap-6 bg-white rounded-2xl shadow-lg w-full sm:w-[352px] h-auto">
                         <div className="flex gap-1">
                             {[...Array(5)].map((_, i) => (
                                 <Star key={i} className="w-5 h-5 fill-orange-500 stroke-orange-500" />
                             ))}
                         </div>
-                        <p className="text-center text-sm leading-relaxed">
+                        <p className="text-center text-sm sm:text-base leading-relaxed">
                             "Best customer service so far. Amazing in all areas, best centralized exchange."
                         </p>
                         <div className="flex items-center gap-3">
@@ -79,19 +80,31 @@ export default function TestimonialsSection() {
                     </div>
                 </div>
 
-
-                {/* Crypto Icons Section */}
-                <div className="bg-[#14162E] rounded-2xl p-6 flex items-center justify-between">
-                    <div className="flex gap-3">
-                        <Image src="/bitcoin.svg" alt="Bitcoin" width={32} height={32} />
-                        <Image src="/ethereum.svg" alt="Ethereum" width={32} height={32} />
-                        <Image src="/tether.svg" alt="Tether" width={32} height={32} />
-                        <Image src="/bnb.svg" alt="BNB" width={32} height={32} />
-                        <Image src="/usdc.svg" alt="USDC" width={32} height={32} />
+                {/* Additional Content */}
+                <div className="rounded-2xl w-full sm:w-[1133px] h-[140px] p-6 flex items-center justify-between" style={{ backgroundImage: "url('/t.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                    <div className="flex pl-8 sm:pl-20 items-center w-full sm:w-[224px] h-[48px] isolation-isolate">
+                        <a href="#" className="flex items-center">
+                            <Image src="/tb.svg" alt="Bitcoin" width={48} height={48} />
+                        </a>
+                        <a href="#" className="flex items-center">
+                            <Image src="/dot.svg" alt="Ethereum" width={48} height={48} />
+                        </a>
+                        <a href="#" className="flex items-center">
+                            <Image src="/tc3.svg" alt="Tether" width={48} height={48} />
+                        </a>
+                        <a href="#" className="flex items-center">
+                            <Image src="/tc4.svg" alt="BNB" width={48} height={48} />
+                        </a>
+                        <a href="#" className="flex items-center">
+                            <Image src="/tc5.svg" alt="USDC" width={48} height={48} />
+                        </a>
                     </div>
-                    <div className="flex items-center gap-2 text-white">
-                        <span className="text-sm">New assets added regularly</span>
-                        <span className="text-2xl">+</span>
+
+                    <div className="flex gap-2 items-center w-[461px] h-[64px]">
+                        <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.5 32C16.0368 16.8419 15.6581 16.4656 0.5 16C15.6581 15.5368 16.0344 15.1581 16.5 0C16.9632 15.1581 17.3419 15.5344 32.5 16C17.3419 16.4656 16.9656 16.8373 16.5 32Z" fill="#F7DF27" />
+                        </svg>
+                        <span className="text-sm text-[#C8C8D0]">New assets added regularly</span>
                     </div>
                 </div>
             </div>
