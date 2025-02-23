@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function TestimonialsSection() {
     return (
         <section
-            className="bg-[#F7F6FE] bg-cover bg-center bg-no-repeat lg:h-[800px] lg:w-full"
+            className="bg-[#F7F6FE] bg-cover bg-center bg-no-repeat lg:h-[800px] lg:pl-20 lg:w-full"
             style={{
                 backgroundImage: `url('${N.src}')`,
             }}
@@ -81,7 +81,7 @@ export default function TestimonialsSection() {
                 </div>
 
                 {/* Additional Content */}
-                <div className="rounded-2xl w-full sm:w-[1133px] h-[140px] p-6 flex items-center justify-between" style={{ backgroundImage: "url('/t.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <div className="rounded-2xl lg:pl-10 w-full sm:w-[1123px] h-[140px] p-6 flex items-center justify-between" style={{ backgroundImage: "url('/t.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
                     <div className="flex pl-8 sm:pl-20 items-center w-full sm:w-[224px] h-[48px] isolation-isolate">
                         <a href="#" className="flex items-center">
                             <Image src="/tb.svg" alt="Bitcoin" width={48} height={48} />
