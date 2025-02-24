@@ -1,25 +1,28 @@
-import RelatedArticles from "@/components/artical"
-import Footer from "@/components/footer"
-import Nav from "@/components/nav"
-import { Button } from "@/components/ui/button"
-import { Facebook, Linkedin, MessageCircle, RssIcon, Share2, ThumbsUp, Twitter } from "lucide-react"
-import Image from "next/image"
+import RelatedArticles from "@/components/artical";
+import Footer from "@/components/footer";
+import Nav from "@/components/nav";
+import { Button } from "@/components/ui/button";
+import { Facebook, Linkedin, MessageCircle, RssIcon, Share2, ThumbsUp, Twitter } from "lucide-react";
+import Image from "next/image";
+
+
+
 
 export default function Page() {
     return (
         <div className="min-h-screen bg-white">
             <Nav />
 
-            <main className="container  mx-auto flex flex-row justify-center items-start lg:pl-24 px-4 py-10 lg:py-14 gap-32">
-                <article className="flex flex-col space-y-8">
+            <main className="container mx-auto flex flex-col lg:flex-row justify-center items-start lg:px-24 px-4 py-10 lg:py-14 gap-10 lg:gap-32">
+                <article className="flex flex-col space-y-8 w-full lg:w-3/5">
                     <header>
                         <div className="text-sm font-semibold text-[#FF6E00] uppercase tracking-wide">Blockchain</div>
-                        <h1 className="text-[32px] font-bold mt-3 text-gray-900 leading-tight">
-                            Cryptocurrency News: Building in Resiliency <br /> and International Co-Operation
+                        <h1 className="text-2xl sm:text-3xl font-bold mt-3 text-gray-900 leading-tight">
+                            Cryptocurrency News: Building in Resiliency <br className="hidden md:block" /> and International Co-Operation
                         </h1>
-                        <div className="flex items-center text-sm text-gray-500 mt-4">
+                        <div className="flex flex-wrap items-center text-sm text-gray-500 mt-4 gap-3">
                             <span>Oct 5, 2023</span>
-                            <span className="mx-3">•</span>
+                            <span className="hidden sm:inline">•</span>
                             <span>3 min read</span>
 
                             <div className="flex items-center gap-2 ml-auto">
@@ -30,11 +33,10 @@ export default function Page() {
                                 ))}
                             </div>
                         </div>
-
                     </header>
 
                     {/* Main content */}
-                    <div className="flex items-start w-full gap-4 h-auto">
+                    <div className="flex flex-col lg:flex-row items-start w-full gap-6">
                         <div className="flex-1">
                             <div className="relative w-full aspect-[2/1] rounded-lg overflow-hidden bg-[#0A0B1C]">
                                 <Image
@@ -58,16 +60,15 @@ export default function Page() {
                             </div>
                         </div>
 
-                        <aside className="flex flex-col items-start w-[256px] h-auto flex-none">
-
+                        {/* Sidebar moves below main content on small screens */}
+                        <aside className="flex flex-col w-full lg:w-[256px]">
                             <RelatedArticles />
                         </aside>
-
                     </div>
 
                     {/* Additional sections */}
                     <section className="mt-8">
-                        <h2 className="text-2xl font-bold mb-4 text-gray-900">What Are Binance Options?</h2>
+                        <h2 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">What Are Binance Options?</h2>
                         <p className="text-gray-600">
                             Binance Options are our newest financial instruments that give traders the right, but not the
                             obligation, to buy or sell the underlying asset at a predetermined price and date. The form of
@@ -77,7 +78,7 @@ export default function Page() {
                     </section>
 
                     <section className="mt-8">
-                        <h2 className="text-2xl font-bold mb-4 text-gray-900">Benefits of Trading Binance Options</h2>
+                        <h2 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">Benefits of Trading Binance Options</h2>
                         <p className="text-gray-600">
                             Being one of the most versatile financial instruments on the market, Binance Options can offer you
                             additional flexibility and cost efficiencies to complement your trading strategies.
@@ -85,7 +86,7 @@ export default function Page() {
                     </section>
 
                     <section className="mt-8">
-                        <h2 className="text-2xl font-bold mb-4 text-gray-900">Advantages of Binance Options</h2>
+                        <h2 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">Advantages of Binance Options</h2>
                         <ul className="space-y-6">
                             <li>
                                 <h3 className="font-bold text-gray-900">Competitive Fees</h3>
@@ -112,7 +113,8 @@ export default function Page() {
                         </ul>
                     </section>
 
-                    <div className="flex items-center  justify-center gap-8 py-6 border-t border-b">
+                    {/* Reaction Buttons */}
+                    <div className="flex items-center justify-center gap-8 py-6 border-t border-b">
                         <Button variant="ghost" size="sm" className="flex items-center gap-2">
                             <ThumbsUp className="h-4 w-4 fill-[#FF6E00]" />
                             <span className="text-gray-600">436</span>
@@ -125,11 +127,7 @@ export default function Page() {
                 </article>
             </main>
 
-
-
-
             <Footer />
         </div>
-    )
+    );
 }
-

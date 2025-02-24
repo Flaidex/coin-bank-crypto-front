@@ -166,74 +166,29 @@ const nav = () => {
                             <div className="pl-4 space-y-2 mt-2">
                                 <a href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7 1.75C4.10051 1.75 1.75 4.10051 1.75 7C1.75 9.89949 4.10051 12.25 7 12.25C9.89949 12.25 12.25 9.89949 12.25 7C12.25 4.10051 9.89949 1.75 7 1.75ZM7 0.25C10.7279 0.25 13.75 3.27208 13.75 7C13.75 10.7279 10.7279 13.75 7 13.75C3.27208 13.75 0.25 10.7279 0.25 7C0.25 3.27208 3.27208 0.25 7 0.25Z"
-                                                fill="#FF6E00"
-                                            />
-                                            <path
-                                                d="M7 3.5V4.375M7 9.625V10.5M7 6.125V7.875"
-                                                stroke="#FF6E00"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                            />
-                                        </svg>
+                                        <Image src="/n1.svg" alt="N2" width={24} height={24} />
+
                                     </div>
                                     Funding
                                 </a>
                                 <a href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.875 1.75L2.625 8.75H7L6.125 12.25L11.375 5.25H7L7.875 1.75Z"
-                                                stroke="#FF6E00"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                        </svg>
+                                        <Image src="/n2.svg" alt="N2" width={24} height={24} />
+
                                     </div>
                                     Staking
                                 </a>
                                 <a href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7 1.75L9.625 6.125L7 10.5L4.375 6.125L7 1.75Z"
-                                                stroke="#FF6E00"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                            <path
-                                                d="M2.625 8.75L4.375 11.375L7 12.25L9.625 11.375L11.375 8.75"
-                                                stroke="#FF6E00"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                        </svg>
+                                        <Image src="/n3.svg" alt="N2" width={24} height={24} />
+
                                     </div>
                                     Liquidity
                                 </a>
                                 <a href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M1.75 10.5L5.25 7L7.875 9.625L12.25 5.25"
-                                                stroke="#FF6E00"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                            <path
-                                                d="M8.75 5.25H12.25V8.75"
-                                                stroke="#FF6E00"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                        </svg>
+                                        <Image src="/n4.svg" alt="N2" width={24} height={24} />
+
                                     </div>
                                     Margin Trading
                                 </a>
@@ -250,111 +205,31 @@ const nav = () => {
                                 Company
                             </Button>
                             <div className="pl-4 space-y-2 mt-2">
-                                <a href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                <a href="/about" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M11.375 12.25V3.5L7.875 1.75L4.375 3.5V12.25H11.375Z"
-                                                stroke="#FF6E00"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                            <path
-                                                d="M2.625 12.25V5.25L4.375 3.5"
-                                                stroke="#FF6E00"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                            <path d="M6.125 5.25H9.625" stroke="#FF6E00" strokeWidth="1.5" strokeLinecap="round" />
-                                            <path d="M6.125 7.875H9.625" stroke="#FF6E00" strokeWidth="1.5" strokeLinecap="round" />
-                                            <path d="M6.125 10.5H9.625" stroke="#FF6E00" strokeWidth="1.5" strokeLinecap="round" />
-                                        </svg>
+                                        <Image src="/n5.svg" alt="N2" width={24} height={24} />
+
                                     </div>
                                     About
                                 </a>
-                                <a href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                <a href="/blog" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.875 1.75H3.5C3.03587 1.75 2.59075 1.93437 2.26256 2.26256C1.93437 2.59075 1.75 3.03587 1.75 3.5V10.5C1.75 10.9641 1.93437 11.4092 2.26256 11.7374C2.59075 12.0656 3.03587 12.25 3.5 12.25H10.5C10.9641 12.25 11.4092 12.0656 11.7374 11.7374C12.0656 11.4092 12.25 10.9641 12.25 10.5V6.125"
-                                                stroke="#FF6E00"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                            <path
-                                                d="M11.375 2.625L7 7"
-                                                stroke="#FF6E00"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                            <path
-                                                d="M8.75 1.75H12.25V5.25"
-                                                stroke="#FF6E00"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                        </svg>
+                                        <Image src="/n6.svg" alt="N2" width={24} height={24} />
+
                                     </div>
                                     Blog
                                 </a>
                                 <a href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7 12.25C9.89949 12.25 12.25 9.89949 12.25 7C12.25 4.10051 9.89949 1.75 7 1.75C4.10051 1.75 1.75 4.10051 1.75 7C1.75 9.89949 4.10051 12.25 7 12.25Z"
-                                                stroke="#FF6E00"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                            <path
-                                                d="M7 9.625V7"
-                                                stroke="#FF6E00"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                            <path
-                                                d="M7 4.375H7.00875"
-                                                stroke="#FF6E00"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                        </svg>
+                                        <Image src="/n7.svg" alt="N2" width={24} height={24} />
+
                                     </div>
                                     FAQs
                                 </a>
                                 <a href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M1.75 6.125V7C1.75 9.89949 4.10051 12.25 7 12.25C9.89949 12.25 12.25 9.89949 12.25 7V6.125"
-                                                stroke="#FF6E00"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                            <path
-                                                d="M7 12.25V10.5"
-                                                stroke="#FF6E00"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                            <path
-                                                d="M10.5 7.875C10.5 7.875 9.625 8.75 7 8.75C4.375 8.75 3.5 7.875 3.5 7.875V3.5C3.5 3.5 4.375 1.75 7 1.75C9.625 1.75 10.5 3.5 10.5 3.5V7.875Z"
-                                                stroke="#FF6E00"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                        </svg>
+                                        <Image src="/n8.svg" alt="N2" width={24} height={24} />
+
                                     </div>
                                     Support
                                 </a>

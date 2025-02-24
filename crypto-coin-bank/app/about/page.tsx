@@ -7,7 +7,7 @@ import IC2 from "@/assert/ic2.svg";
 import IC3 from "@/assert/ic3.svg";
 import IC4 from "@/assert/ic4.svg";
 import { Button } from "@/components/ui/button";
-import { Linkedin, Twitter } from "lucide-react";
+import { Instagram, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 
 
@@ -22,7 +22,7 @@ const page = () => {
                 {/* Header */}
 
 
-                <main className="pb-20">
+                <main className="pb-0">
                     {/* Hero Section */}
                     <section className="container mx-auto px-4 pt-12 pb-20">
                         <div className="max-w-[800px] mx-auto text-center">
@@ -88,9 +88,23 @@ const page = () => {
                                 <span className="text-[#FF6E00] text-[80px] leading-[110%] font-medium">”</span>
                             </div>
                             <div className="flex items-center justify-center gap-2">
-                                <div className="w-10 h-10 rounded-full bg-gray-200"></div>
-                                <span className="text-sm font-medium">John Doe</span>
+                                <div className="w-10 h-10 rounded-full bg-gray-200">
+                                    <Image
+                                        src="/abjon.png"
+                                        alt="John Doe"
+                                        width={40}
+                                        height={40}
+                                        className="rounded-full"
+                                    />
+                                </div>
+
+                                {/* Wrap text elements in a div and use flex-col */}
+                                <div className="flex flex-col">
+                                    <span className="text-[14px] leading-[145%] font-medium text-black">John Clayton</span>
+                                    <span className="text-[12px] leading-[135%] tracking-[0.005em] text-gray-500 font-normal">Investor</span>
+                                </div>
                             </div>
+
                         </div>
                     </section>
 
@@ -127,20 +141,35 @@ const page = () => {
                         </div>
                     </section>
 
-                    {/* Founders Section */}
                     <section className="container mx-auto px-4 py-16">
                         <h2 className="text-xl font-semibold text-center mb-12">Our Founders</h2>
-                        <div className="grid md:grid-cols-3 gap-12 max-w-[800px] mx-auto">
+                        <div className="flex flex-wrap justify-center gap-8 max-w-[1120px] mx-auto">
                             {[
-                                { name: "Clark Kent", role: "Founder & CEO", bgColor: "bg-orange-500" },
-                                { name: "Ali Price", role: "Founder & CTO", bgColor: "bg-blue-600" },
-                                { name: "Miranda Nielsen", role: "Founder & COO", bgColor: "bg-yellow-500" },
+                                { name: "Clark Kent", role: "Founder & CEO", image: "/oza.png", bg: "#FF6E00" },
+                                { name: "Ali Price", role: "Founder & CTO", image: "/ali.png", bg: "#D3D6DA" },
+                                { name: "Miranda Nielsen", role: "Founder & COO", image: "/mar.png", bg: "#FFCD66" },
                             ].map((founder) => (
-                                <div key={founder.name} className="text-center">
-                                    <div className={`w-28 h-28 ${founder.bgColor} rounded-full mx-auto mb-4`}></div>
+                                <div
+                                    key={founder.name}
+                                    className="flex flex-col items-center bg-white rounded-xl p-6 w-[352px] h-[367px] shadow-[0px_0px_12px_rgba(82,53,232,0.2)]"
+                                >
+                                    {/* Updated Avatar Founder */}
+                                    <div
+                                        className="w-[148px] h-[148px] pt-4 rounded-full overflow-hidden mb-4 flex items-center justify-center"
+                                        style={{ backgroundColor: founder.bg }}
+                                    >
+                                        <Image src={founder.image} alt={founder.name} width={148} height={148} className="rounded-full" />
+                                    </div>
+
+                                    {/* Name and Role */}
                                     <h3 className="font-medium mb-1">{founder.name}</h3>
                                     <p className="text-sm text-gray-500 mb-4">{founder.role}</p>
+
+                                    {/* Social Icons */}
                                     <div className="flex justify-center gap-2">
+                                        <Button variant="ghost" size="icon" className="h-8 w-8">
+                                            <Instagram className="h-4 w-4" />
+                                        </Button>
                                         <Button variant="ghost" size="icon" className="h-8 w-8">
                                             <Twitter className="h-4 w-4" />
                                         </Button>
@@ -153,23 +182,29 @@ const page = () => {
                         </div>
                     </section>
 
+
+
+
+
+
                     {/* Partners Section */}
-                    <section className="container mx-auto px-4 py-16">
+                    <section className="flex flex-col items-center px-6 sm:px-12 md:px-20 lg:px-40 pt-16 pb-12 gap-12 w-full bg-gradient-to-b from-white via-[#FFFFFF] to-[#F7F6FE]">
                         <div className="text-center">
                             <span className="text-orange-500 text-sm font-medium">PARTNERS</span>
                             <h2 className="text-xl font-semibold mt-2 mb-2">We're backed by the best</h2>
                             <p className="text-sm text-gray-500 mb-12">Trusted by these innovative leading companies</p>
-                            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center justify-items-center">
-                                <Image src={IC1} alt="IC1" className="w-171 h-32" />
-                                <Image src={IC2} alt="IC2" className="w-171 h-32" />
-                                <Image src={IC3} alt="IC3" className="w-171 h-32" />
-                                <Image src={IC4} alt="IC4" className="w-171 h-32" />
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 lg:gap-20 items-center justify-items-center">
+                                <Image src={IC1} alt="IC1" className="w-[171px] h-32" />
+                                <Image src={IC2} alt="IC2" className="w-[171px] h-32" />
+                                <Image src={IC3} alt="IC3" className="w-[171px] h-32" />
+                                <Image src={IC4} alt="IC4" className="w-[171px] h-32" />
                             </div>
                         </div>
                     </section>
 
+
                     {/* Join Mission CTA */}
-                    <section className="container mx-auto px-4 py-16">
+                    <section className="container mx-auto px-4 py-16 bg-[#F7F6FE]">
                         <div className="bg-[#14162E] text-white rounded-3xl p-12 text-center max-w-[1000px] mx-auto">
                             <h2 className="text-2xl font-bold mb-4">Join our mission</h2>
                             <p className="text-gray-300 mb-8 max-w-[600px] mx-auto">
