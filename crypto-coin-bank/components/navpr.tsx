@@ -1,7 +1,6 @@
 
 "use client"
 import BG from "@/assert/bgico.svg"
-import logo from "@/assert/logot.svg"
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { ChevronDown, Menu, X } from "lucide-react"
@@ -16,7 +15,7 @@ const nav = () => {
     }
 
     return (
-        <nav className="flex flex-col items-start p-6 gap-2 w-full bg-white bg-opacity-40 backdrop-blur-lg relative">
+        <nav className="flex flex-col items-start p-6 gap-2 w-full bg-[#FF6E00] backdrop-blur-lg relative">
             {/* Top Navigation */}
             <div className="flex items-center justify-between w-full max-w-7xl mx-auto">
 
@@ -27,7 +26,9 @@ const nav = () => {
                     </a>
                     <span className="flex items-center space-x-2">
                         <a href="/">
-                            <Image src={logo || "/bgco.svg"} alt="Coinbank Logo" width={116} height={20} />
+                            <h2 className="text-white font-bold text-2xl">
+                                CoinBank
+                            </h2>
                         </a>
                     </span>
                 </div>
@@ -37,7 +38,7 @@ const nav = () => {
                 <div className="hidden md:flex items-center gap-8">
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>
-                            <Button variant="ghost" className="text-black flex items-center gap-1">
+                            <Button variant="ghost" className="text-white flex items-center gap-1">
                                 Features <ChevronDown className="h-4 w-4" />
                             </Button>
                         </DropdownMenuTrigger>
@@ -81,13 +82,13 @@ const nav = () => {
                         </DropdownMenuContent>
                     </DropdownMenu>
 
-                    <Button variant="ghost" className="text-black">
+                    <Button variant="ghost" className="text-white">
                         <a href="/price">Prices</a>
                     </Button>
 
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>
-                            <Button variant="ghost" className="text-black flex items-center gap-1">
+                            <Button variant="ghost" className="text-white flex items-center gap-1">
                                 Company <ChevronDown className="h-4 w-4" />
                             </Button>
                         </DropdownMenuTrigger>
@@ -131,7 +132,7 @@ const nav = () => {
                         </DropdownMenuContent>
                     </DropdownMenu>
 
-                    <Button variant="ghost" className="text-black">
+                    <Button variant="ghost" className="text-white">
                         <a href="#">Developers</a>
                     </Button>
                 </div>
