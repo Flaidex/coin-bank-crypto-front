@@ -139,10 +139,10 @@ const nav = () => {
                 {/* Right Side: Buttons */}
                 <div className="hidden md:flex items-center gap-4">
                     <Button className="text-black bg-white border border-[#FFE0C8] hover:bg-[#FF6E00] hover:text-white rounded-lg px-6 py-2 transition-colors duration-300">
-                        <a href="#">Sign In</a>
+                        <a href="/signin">Sign In</a>
                     </Button>
                     <Button className="bg-white border border-[#FFE0C8] text-[#FF6E00] hover:bg-[#FF6E00] hover:text-white rounded-lg px-6 py-2 transition-colors duration-300">
-                        <a href="#">Get Started</a>
+                        <a href="/Signup">Get Started</a>
                     </Button>
                 </div>
 
@@ -244,14 +244,14 @@ const nav = () => {
                             className="text-black bg-white border border-[#FFE0C8] hover:bg-[#FF6E00] hover:text-white rounded-lg px-6 py-2 transition-colors duration-300 w-full"
                             onClick={toggleMenu}
                         >
-                            <a href="#">Sign In</a>
+                            <a href="/signin">Sign In</a>
                         </Button>
 
                         <Button
                             className="bg-white border border-[#FFE0C8] text-[#FF6E00] hover:bg-[#FF6E00] hover:text-white rounded-lg px-6 py-2 transition-colors duration-300 w-full"
                             onClick={toggleMenu}
                         >
-                            <a href="#">Get Started</a>
+                            <a href="/Signup">Get Started</a>
                         </Button>
                     </div>
                 </div>

@@ -60,7 +60,6 @@ export default function Page() {
                             </div>
                         </div>
 
-                        {/* Sidebar moves below main content on small screens */}
                         <aside className="flex flex-col w-full lg:w-[256px]">
                             <RelatedArticles />
                         </aside>

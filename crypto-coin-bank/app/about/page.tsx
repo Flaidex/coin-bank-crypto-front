@@ -98,7 +98,6 @@ const page = () => {
                                     />
                                 </div>
 
-                                {/* Wrap text elements in a div and use flex-col */}
                                 <div className="flex flex-col">
                                     <span className="text-[14px] leading-[145%] font-medium text-black">John Clayton</span>
                                     <span className="text-[12px] leading-[135%] tracking-[0.005em] text-gray-500 font-normal">Investor</span>
@@ -108,7 +107,6 @@ const page = () => {
                         </div>
                     </section>
 
-                    {/* Two Images Section */}
                     <section className="container mx-auto px-4 py-16">
                         <div className="max-w-[1000px] mx-auto">
                             <div className="grid md:grid-cols-2 gap-6 mb-16">

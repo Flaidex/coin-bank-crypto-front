@@ -24,7 +24,7 @@ async function getMarketData() {
     return res.json()
   } catch (error) {
     console.error("Failed to fetch market data:", error)
-    return fallbackData // Return fallback data if the API call fails
+    return fallbackData
   }
 }
 
