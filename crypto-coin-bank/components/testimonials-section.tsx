@@ -30,7 +30,7 @@ export default function TestimonialsSection() {
                             ))}
                         </div>
                         <p className="text-center text-sm sm:text-base leading-relaxed">
-                            "Cool crypto currency, fast withdrawals and deposits, way better than any wallet."
+                            &quot;Cool crypto currency, fast withdrawals and deposits, way better than any wallet.&quot;
                         </p>
                         <div className="flex items-center gap-3">
                             <Image src="/jj.png" alt="Avatar" width={40} height={40} className="rounded-full" />
@@ -49,7 +49,7 @@ export default function TestimonialsSection() {
                             ))}
                         </div>
                         <p className="text-center text-sm sm:text-base leading-relaxed">
-                            "It's worth it, very intuitive and easy to learn about cryptocurrencies."
+                            &quot;It&apos;s worth it, very intuitive and easy to learn about cryptocurrencies.&quot;
                         </p>
                         <div className="flex items-center gap-3">
                             <Image src="/jon.png" alt="Avatar" width={40} height={40} className="rounded-full" />
@@ -68,7 +68,7 @@ export default function TestimonialsSection() {
                             ))}
                         </div>
                         <p className="text-center text-sm sm:text-base leading-relaxed">
-                            "Best customer service so far. Amazing in all areas, best centralized exchange."
+                            &quot;Best customer service so far. Amazing in all areas, best centralized exchange.&quot;
                         </p>
                         <div className="flex items-center gap-3">
                             <Image src="/sava.png" alt="Avatar" width={40} height={40} className="rounded-full" />

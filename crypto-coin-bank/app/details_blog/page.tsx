@@ -1,6 +1,6 @@
 import RelatedArticles from "@/components/artical";
 import Footer from "@/components/footer";
-import Nav from "@/components/nav";
+import Nav from "@/components/Nav";
 import { Button } from "@/components/ui/button";
 import { Facebook, Linkedin, MessageCircle, RssIcon, Share2, ThumbsUp, Twitter } from "lucide-react";
 import Image from "next/image";

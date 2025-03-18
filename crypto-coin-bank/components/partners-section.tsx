@@ -10,9 +10,9 @@ export default function PartnersSection() {
             <div className="max-w-7xl mx-auto text-center space-y-8">
                 <div className="space-y-2 text-center">
                     <p className="text-orange-500 font-medium text-sm md:text-base">PARTNERS</p>
-                    <h2 className="text-2xl md:text-3xl font-bold">We're backed by the best</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold">We&apos;re backed by the best</h2>
                     <p className="text-gray-600 text-sm md:text-base">
-                        Trusted by these blockchain's leading industries
+                        Trusted by these blockchain&apos;s leading industries
                     </p>
                 </div>
 

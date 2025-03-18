@@ -2,6 +2,7 @@
 
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
     const menuItems = [
@@ -44,7 +45,7 @@ export default function Footer() {
                 { name: "Blog", href: "/blog" },
                 { name: "Help & Support", href: "/help-support" },
                 { name: "Customer Stories", href: "/customer-stories" },
-                { name: "FAQ", href: "/faq" },
+                { name: "FAQ", href: "/FQA" },
             ],
         },
     ];
@@ -102,10 +103,10 @@ export default function Footer() {
                                 <div className="col-span-2 md:col-span-2 flex flex-col justify-start items-start gap-6">
                                     <div className="flex flex-col justify-start items-start gap-4">
                                         <div className="flex pt-6 items-center gap-2 p-1 w-[42px] h-[40px]">
-                                            <a href="/">
+                                            <Link href="/">
                                                 <Image src="/bgico.svg" alt="" width={42} height={42} />
 
-                                            </a>
+                                            </Link>
                                         </div>
 
                                         <Select defaultValue="english">
@@ -122,9 +123,9 @@ export default function Footer() {
                                         {/* Social Icons */}
                                         <div className="flex gap-6 text-gray-400">
                                             {[1, 2, 3, 4, 5].map((num) => (
-                                                <a key={num} href="#" className="hover:text-gray-600">
+                                                <Link key={num} href="#" className="hover:text-gray-600">
                                                     <Image src={`/s${num}.svg`} alt="" width={20} height={20} />
-                                                </a>
+                                                </Link>
                                             ))}
                                         </div>
                                     </div>
@@ -137,9 +138,9 @@ export default function Footer() {
                                         <ul className="space-y-2">
                                             {section.links.map((link, i) => (
                                                 <li key={i}>
-                                                    <a href={link.href} className="text-gray-500 hover:text-gray-900">
+                                                    <Link href={link.href} className="text-gray-500 hover:text-gray-900">
                                                         {link.name}
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             ))}
                                         </ul>

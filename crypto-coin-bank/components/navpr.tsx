@@ -1,13 +1,13 @@
-
 "use client"
+
 import BG from "@/assert/bgico.svg"
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { ChevronDown, Menu, X } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { useState } from "react"
-
-const nav = () => {
+const Navpr = () => {
     const [isOpen, setIsOpen] = useState(false)
 
     const toggleMenu = () => {
@@ -21,15 +21,15 @@ const nav = () => {
 
 
                 <div className="flex items-center gap-2">
-                    <a href="/" className="w-8 h-6">
+                    <Link href="/" className="w-8 h-6">
                         <Image src={BG || "/bgco.svg"} alt="BG" />
-                    </a>
+                    </Link>
                     <span className="flex items-center space-x-2">
-                        <a href="/">
+                        <Link href="/">
                             <h2 className="text-white font-bold text-2xl">
                                 CoinBank
                             </h2>
-                        </a>
+                        </Link>
                     </span>
                 </div>
 
@@ -44,46 +44,42 @@ const nav = () => {
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="start" className="w-48">
                             <DropdownMenuItem>
-                                <a href="#" className="flex items-center gap-2">
+                                <Link href="#" className="flex items-center gap-2">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
                                         <Image src="/n1.svg" alt="N2" width={24} height={24} />
-
-
                                     </div>
                                     Funding
-                                </a>
+                                </Link>
                             </DropdownMenuItem>
                             <DropdownMenuItem>
-                                <a href="#" className="flex items-center gap-2">
+                                <Link href="#" className="flex items-center gap-2">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
                                         <Image src="/n2.svg" alt="N2" width={24} height={24} />
                                     </div>
                                     Staking
-                                </a>
+                                </Link>
                             </DropdownMenuItem>
                             <DropdownMenuItem>
-                                <a href="#" className="flex items-center gap-2">
+                                <Link href="#" className="flex items-center gap-2">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
                                         <Image src="/n3.svg" alt="N2" width={24} height={24} />
-
                                     </div>
                                     Liquidity
-                                </a>
+                                </Link>
                             </DropdownMenuItem>
                             <DropdownMenuItem>
-                                <a href="#" className="flex items-center gap-2">
+                                <Link href="#" className="flex items-center gap-2">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
                                         <Image src="/n4.svg" alt="N2" width={24} height={24} />
-
                                     </div>
                                     Margin Trading
-                                </a>
+                                </Link>
                             </DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
 
                     <Button variant="ghost" className="text-white">
-                        <a href="/price">Prices</a>
+                        <Link href="/price">Prices</Link>
                     </Button>
 
                     <DropdownMenu>
@@ -94,56 +90,52 @@ const nav = () => {
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="start" className="w-48">
                             <DropdownMenuItem>
-                                <a href="/about" className="flex items-center gap-2">
+                                <Link href="/about" className="flex items-center gap-2">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
                                         <Image src="/n5.svg" alt="N2" width={24} height={24} />
-
                                     </div>
                                     About
-                                </a>
+                                </Link>
                             </DropdownMenuItem>
                             <DropdownMenuItem>
-                                <a href="/blog" className="flex items-center gap-2">
+                                <Link href="/blog" className="flex items-center gap-2">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
                                         <Image src="/n6.svg" alt="N2" width={24} height={24} />
-
                                     </div>
                                     Blog
-                                </a>
+                                </Link>
                             </DropdownMenuItem>
                             <DropdownMenuItem>
-                                <a href="#" className="flex items-center gap-2">
+                                <Link href="/FQA" className="flex items-center gap-2">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
                                         <Image src="/n7.svg" alt="N2" width={24} height={24} />
-
                                     </div>
                                     FAQs
-                                </a>
+                                </Link>
                             </DropdownMenuItem>
                             <DropdownMenuItem>
-                                <a href="#" className="flex items-center gap-2">
+                                <Link href="#" className="flex items-center gap-2">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
                                         <Image src="/n8.svg" alt="N2" width={24} height={24} />
-
                                     </div>
                                     Support
-                                </a>
+                                </Link>
                             </DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
 
                     <Button variant="ghost" className="text-white">
-                        <a href="#">Developers</a>
+                        <Link href="/Developers">Developers</Link>
                     </Button>
                 </div>
 
                 {/* Right Side: Buttons */}
                 <div className="hidden md:flex items-center gap-4">
                     <Button className="text-black bg-white border border-[#FFE0C8] hover:bg-[#FF6E00] hover:text-white rounded-lg px-6 py-2 transition-colors duration-300">
-                        <a href="/signin">Sign In</a>
+                        <Link href="/signin">Sign In</Link>
                     </Button>
                     <Button className="bg-white border border-[#FFE0C8] text-[#FF6E00] hover:bg-[#FF6E00] hover:text-white rounded-lg px-6 py-2 transition-colors duration-300">
-                        <a href="/Signup">Get Started</a>
+                        <Link href="/Signup">Get Started</Link>
                     </Button>
                 </div>
 
@@ -165,39 +157,35 @@ const nav = () => {
                                 Features
                             </Button>
                             <div className="pl-4 space-y-2 mt-2">
-                                <a href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
                                         <Image src="/n1.svg" alt="N2" width={24} height={24} />
-
                                     </div>
                                     Funding
-                                </a>
-                                <a href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                </Link>
+                                <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
                                         <Image src="/n2.svg" alt="N2" width={24} height={24} />
-
                                     </div>
                                     Staking
-                                </a>
-                                <a href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                </Link>
+                                <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
                                         <Image src="/n3.svg" alt="N2" width={24} height={24} />
-
                                     </div>
                                     Liquidity
-                                </a>
-                                <a href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                </Link>
+                                <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
                                         <Image src="/n4.svg" alt="N2" width={24} height={24} />
-
                                     </div>
                                     Margin Trading
-                                </a>
+                                </Link>
                             </div>
                         </div>
 
                         <Button variant="ghost" className="text-black w-full justify-start" onClick={toggleMenu}>
-                            <a href="/price">Prices</a>
+                            <Link href="/price">Prices</Link>
                         </Button>
 
                         {/* Company Dropdown */}
@@ -206,54 +194,46 @@ const nav = () => {
                                 Company
                             </Button>
                             <div className="pl-4 space-y-2 mt-2">
-                                <a href="/about" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                <Link href="/about" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
                                         <Image src="/n5.svg" alt="N2" width={24} height={24} />
-
                                     </div>
                                     About
-                                </a>
-                                <a href="/blog" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                </Link>
+                                <Link href="/blog" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
                                         <Image src="/n6.svg" alt="N2" width={24} height={24} />
-
                                     </div>
                                     Blog
-                                </a>
-                                <a href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                </Link>
+                                <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
                                         <Image src="/n7.svg" alt="N2" width={24} height={24} />
-
                                     </div>
                                     FAQs
-                                </a>
-                                <a href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                </Link>
+                                <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
                                         <Image src="/n8.svg" alt="N2" width={24} height={24} />
-
                                     </div>
                                     Support
-                                </a>
+                                </Link>
                             </div>
                         </div>
 
                         <Button variant="ghost" className="text-black w-full justify-start" onClick={toggleMenu}>
-                            <a href="#">Developers</a>
+                            <Link href="/Developers">Developers</Link>
                         </Button>
 
-                        <Button
-                            className="text-black bg-white border border-[#FFE0C8] hover:bg-[#FF6E00] hover:text-white rounded-lg px-6 py-2 transition-colors duration-300 w-full"
-                            onClick={toggleMenu}
-                        >
-                            <a href="/signin">Sign In</a>
-                        </Button>
-
-                        <Button
-                            className="bg-white border border-[#FFE0C8] text-[#FF6E00] hover:bg-[#FF6E00] hover:text-white rounded-lg px-6 py-2 transition-colors duration-300 w-full"
-                            onClick={toggleMenu}
-                        >
-                            <a href="/Signup">Get Started</a>
-                        </Button>
+                        {/* Right Buttons (Sign In & Get Started) */}
+                        <div className="mt-4 flex flex-col gap-4 w-full">
+                            <Button className="w-full text-black bg-white border border-[#FFE0C8] hover:bg-[#FF6E00] hover:text-white rounded-lg">
+                                <Link href="/signin">Sign In</Link>
+                            </Button>
+                            <Button className="w-full bg-white border border-[#FFE0C8] text-[#FF6E00] hover:bg-[#FF6E00] hover:text-white rounded-lg">
+                                <Link href="/Signup">Get Started</Link>
+                            </Button>
+                        </div>
                     </div>
                 </div>
             )}
@@ -261,5 +241,4 @@ const nav = () => {
     )
 }
 
-
-export default nav
+export default Navpr;
