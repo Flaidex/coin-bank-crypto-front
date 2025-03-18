@@ -1,22 +1,18 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { CategoryScale, Chart as ChartJS, Legend, LinearScale, LineElement, PointElement, Title, Tooltip } from 'chart.js'
-import { EyeIcon, EyeOffIcon } from 'lucide-react'
-import Image from "next/image"
-import Link from "next/link"
-import { useState } from "react"
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { CategoryScale, Chart as ChartJS, Legend, LinearScale, LineElement, PointElement, Title, Tooltip } from 'chart.js';
+import { EyeIcon, EyeOffIcon } from 'lucide-react';
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 // Register chart components
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 export default function Page() {
-    const [showPassword, setShowPassword] = useState(false)
-
-
-
-
+    const [showPassword, setShowPassword] = useState(false);
 
     return (
         <div className="grid min-h-screen md:grid-cols-2 gap-4">
@@ -24,12 +20,13 @@ export default function Page() {
             <div className="p-8 md:p-12 lg:p-16 flex flex-col">
                 <div className="max-w-sm mx-auto w-full">
                     <div className="mb-8">
-                        <a href="/" className="flex items-center gap-2">
+                        <Link href="/" className="flex items-center gap-2">
                             <Image src="/bgico.svg" width={32} height={32} alt="Coinbank" />
                             <span className="text-xl font-bold tracking-tight text-[#0E0637]">Coinbank</span>
-                        </a>
+                        </Link>
+
                         <h1 className="text-2xl font-semibold pt-5 mb-2">Sign in to Coinbank</h1>
-                        <p className="text-sm text-muted-foreground">We're glad you are back</p>
+                        <p className="text-sm text-muted-foreground">We&apos;re glad you are back</p>
                     </div>
 
                     <form className="space-y-4">
@@ -103,11 +100,12 @@ export default function Page() {
                     </div>
 
                     <p className="mt-6 text-center text-sm text-muted-foreground">
-                        Don't have an account already?{' '}
+                        Do not have an account already?
                         <Link href="/Signup" className="text-orange-500 hover:text-orange-600">
                             Sign up now
                         </Link>
                     </p>
+
                 </div>
             </div>
 

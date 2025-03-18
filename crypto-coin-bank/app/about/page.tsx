@@ -1,37 +1,28 @@
-
-import Footer from '../../components/footer';
-import Nav from '../../components/nav';
-
+"use client"
 import IC1 from "@/assert/ic1.svg";
 import IC2 from "@/assert/ic2.svg";
 import IC3 from "@/assert/ic3.svg";
 import IC4 from "@/assert/ic4.svg";
+import Footer from '../../components/footer';
+import Nav from '../../components/Nav';
 import { Button } from "@/components/ui/button";
 import { Instagram, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 
 
-
-
-
-const page = () => {
+const Page = () => {
     return (
         <div>
             <Nav />
             <div className="min-h-screen bg-background">
                 {/* Header */}
-
-
                 <main className="pb-0">
                     {/* Hero Section */}
                     <section className="container mx-auto px-4 pt-12 pb-20">
                         <div className="max-w-[800px] mx-auto text-center">
                             <span className="text-orange-500 text-sm font-medium">ABOUT</span>
-                            <h1 className="text-4xl md:text-[40px] font-bold mt-4 mb-12 leading-tight">
-                                Building cryptocurrency
-                                <br />
-                                platform for everyone
-                            </h1>
+                            <h1 className="text-xl font-semibold mb-4">Our Missions</h1>
+
                             <div className="rounded-2xl overflow-hidden">
                                 <Image
                                     src="/about.png"
@@ -47,18 +38,19 @@ const page = () => {
                     {/* Mission Section */}
                     <section className="container mx-auto px-4 py-16">
                         <div className="grid md:grid-cols-[1.5fr,1fr] gap-16 max-w-[1000px] mx-auto">
-                            <div>
+                            <div className="text-center md:text-left">
                                 <h2 className="text-xl font-semibold mb-4">Our Mission</h2>
                                 <p className="text-gray-600 mb-6">
-                                    Every person could use resources offered via all blockchain for personal gain. We offer the ecosystem to
-                                    do so with ease. Each member receives professional support from a dedicated group. Money makes credit
-                                    card approach difficult and all steps to gain.
+                                    Every person could use resources offered via all blockchain for personal gain. We offer the ecosystem
+                                    to do so with ease. Each member receives professional support from a dedicated group. Money makes
+                                    credit card approach difficult and all steps to gain.
                                 </p>
                                 <a href="#" className="text-orange-500 font-medium hover:underline">
                                     Learn more
+                                    <span>&apos;</span>
                                 </a>
                             </div>
-                            <div className="flex flex-col gap-4 w-[448px]">
+                            <div className="flex flex-col gap-4 w-full md:w-[448px]">
                                 {/* First Box */}
                                 <div className="flex flex-col justify-center items-start w-full p-8 bg-white border border-[#E7E3FC] rounded-xl">
                                     <div className="text-2xl font-bold text-gray-900">1 million+</div>
@@ -71,7 +63,6 @@ const page = () => {
                                     <div className="text-sm text-gray-500">Transaction per second</div>
                                 </div>
                             </div>
-
                         </div>
                     </section>
 
@@ -79,66 +70,30 @@ const page = () => {
                     <section className="container mx-auto px-4 py-16">
                         <div className="max-w-[600px] mx-auto text-center">
                             <div className="flex flex-col items-center text-center max-w-[736px] mx-auto space-y-4">
-                                <span className="text-[#FF6E00] text-[80px] leading-[110%] font-medium">“</span>
+                                <span className="text-[#FF6E00] text-[80px] leading-[110%] font-medium">&ldquo;</span>
 
                                 <blockquote className="text-[#0E0637] text-[40px] leading-[140%] font-medium">
                                     Its low fees, high rates for staking, and futures markets are all a draw.
                                 </blockquote>
 
-                                <span className="text-[#FF6E00] text-[80px] leading-[110%] font-medium">”</span>
+                                <span className="text-[#FF6E00] text-[80px] leading-[110%] font-medium">&rdquo;</span>
                             </div>
                             <div className="flex items-center justify-center gap-2">
                                 <div className="w-10 h-10 rounded-full bg-gray-200">
-                                    <Image
-                                        src="/abjon.png"
-                                        alt="John Doe"
-                                        width={40}
-                                        height={40}
-                                        className="rounded-full"
-                                    />
+                                    <Image src="/abjon.png" alt="John Doe" width={40} height={40} className="rounded-full" />
                                 </div>
 
                                 <div className="flex flex-col">
                                     <span className="text-[14px] leading-[145%] font-medium text-black">John Clayton</span>
-                                    <span className="text-[12px] leading-[135%] tracking-[0.005em] text-gray-500 font-normal">Investor</span>
+                                    <span className="text-[12px] leading-[135%] tracking-[0.005em] text-gray-500 font-normal">
+                                        Investor
+                                    </span>
                                 </div>
-                            </div>
-
-                        </div>
-                    </section>
-
-                    <section className="container mx-auto px-4 py-16">
-                        <div className="max-w-[1000px] mx-auto">
-                            <div className="grid md:grid-cols-2 gap-6 mb-16">
-                                <div className="rounded-2xl overflow-hidden">
-                                    <Image
-                                        src="/about1.png"
-                                        alt="Team working"
-                                        width={480}
-                                        height={320}
-                                        className="w-full"
-                                    />
-                                </div>
-                                <div className="rounded-2xl overflow-hidden">
-                                    <Image
-                                        src="/image.png"
-                                        alt="Person working"
-                                        width={480}
-                                        height={320}
-                                        className="w-full"
-                                    />
-                                </div>
-                            </div>
-                            <div className="max-w-[480px]">
-                                <h2 className="text-3xl font-bold mb-4">The power to chart your own financial course</h2>
-                                <p className="text-gray-600">
-                                    Every person could use resources offered via all blockchain for personal gain. We offer the ecosystem to
-                                    do so with ease. Each member receives professional support from a dedicated group.
-                                </p>
                             </div>
                         </div>
                     </section>
 
+                    {/* Our Founders Section */}
                     <section className="container mx-auto px-4 py-16">
                         <h2 className="text-xl font-semibold text-center mb-12">Our Founders</h2>
                         <div className="flex flex-wrap justify-center gap-8 max-w-[1120px] mx-auto">
@@ -149,14 +104,20 @@ const page = () => {
                             ].map((founder) => (
                                 <div
                                     key={founder.name}
-                                    className="flex flex-col items-center bg-white rounded-xl p-6 w-[352px] h-[367px] shadow-[0px_0px_12px_rgba(82,53,232,0.2)]"
+                                    className="flex flex-col items-center bg-white rounded-xl p-6 w-full sm:w-[352px] h-auto sm:h-[367px] shadow-[0px_0px_12px_rgba(82,53,232,0.2)]"
                                 >
                                     {/* Updated Avatar Founder */}
                                     <div
                                         className="w-[148px] h-[148px] pt-4 rounded-full overflow-hidden mb-4 flex items-center justify-center"
                                         style={{ backgroundColor: founder.bg }}
                                     >
-                                        <Image src={founder.image} alt={founder.name} width={148} height={148} className="rounded-full" />
+                                        <Image
+                                            src={founder.image || "/placeholder.svg"}
+                                            alt={founder.name}
+                                            width={148}
+                                            height={148}
+                                            className="rounded-full"
+                                        />
                                     </div>
 
                                     {/* Name and Role */}
@@ -180,29 +141,26 @@ const page = () => {
                         </div>
                     </section>
 
-
-
-
-
-
                     {/* Partners Section */}
-                    <section className="flex flex-col items-center px-6 sm:px-12 md:px-20 lg:px-40 pt-16 pb-12 gap-12 w-full bg-gradient-to-b from-white via-[#FFFFFF] to-[#F7F6FE]">
-                        <div className="text-center">
-                            <span className="text-orange-500 text-sm font-medium">PARTNERS</span>
-                            <h2 className="text-xl font-semibold mt-2 mb-2">We're backed by the best</h2>
-                            <p className="text-sm text-gray-500 mb-12">Trusted by these innovative leading companies</p>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 lg:gap-20 items-center justify-items-center">
-                                <Image src={IC1} alt="IC1" className="w-[171px] h-32" />
-                                <Image src={IC2} alt="IC2" className="w-[171px] h-32" />
-                                <Image src={IC3} alt="IC3" className="w-[171px] h-32" />
-                                <Image src={IC4} alt="IC4" className="w-[171px] h-32" />
+                    <section className="py-24 px-4">
+                        <div className="max-w-7xl mx-auto text-center space-y-8">
+                            <div className="space-y-2 text-center">
+                                <p className="text-orange-500 font-medium text-sm md:text-base">PARTNERS</p>
+                                <h2 className="text-2xl md:text-3xl font-bold">Were backed by the best</h2>
+                                <p className="text-gray-600 text-sm md:text-base">Trusted by these blockchains leading industries</p>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center justify-items-center">
+                                <Image src={IC1 || "/placeholder.svg"} alt="IC1" className="w-auto h-32" />
+                                <Image src={IC2 || "/placeholder.svg"} alt="IC2" className="w-auto h-32" />
+                                <Image src={IC3 || "/placeholder.svg"} alt="IC3" className="w-auto h-32" />
+                                <Image src={IC4 || "/placeholder.svg"} alt="IC4" className="w-auto h-32" />
                             </div>
                         </div>
                     </section>
 
-
                     {/* Join Mission CTA */}
-                    <section className="container mx-auto px-4 py-16 bg-[#F7F6FE]">
+                    <section className="container mx-auto px-4 py-16 ">
                         <div className="bg-[#14162E] text-white rounded-3xl p-12 text-center max-w-[1000px] mx-auto">
                             <h2 className="text-2xl font-bold mb-4">Join our mission</h2>
                             <p className="text-gray-300 mb-8 max-w-[600px] mx-auto">
@@ -211,15 +169,12 @@ const page = () => {
                             <Button className="bg-orange-500 hover:bg-orange-600">See Career Page</Button>
                         </div>
                     </section>
-
-
                 </main>
-
-
             </div>
             <Footer />
         </div>
     )
 }
 
-export default page
+export default Page
+

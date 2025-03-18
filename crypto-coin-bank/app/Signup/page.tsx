@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowDownCircle, ArrowUpCircle, Eye } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { Suspense } from "react";
-
 export default function SignupPage() {
     return (
         <div className="flex flex-col lg:flex-row items-start p-0 relative w-full min-h-screen bg-gradient-to-b from-white to-[#F7F6FE]">
@@ -13,14 +13,14 @@ export default function SignupPage() {
             <div className="w-full lg:w-1/2 bg-gradient-to-b from-white to-[#F7F6FE] px-6 lg:px-20 py-16 lg:py-20">
                 <div className="flex flex-col gap-10">
                     {/* Logo */}
-                    <a href="/" className="flex items-center gap-2">
+                    <Link href="/" className="flex items-center gap-2">
                         <Image src="/bgico.svg" width={32} height={32} alt="Coinbank" />
                         <span className="text-xl font-bold tracking-tight text-[#0E0637]">Coinbank</span>
-                    </a>
+                    </Link>
                     {/* Form Heading */}
                     <div className="space-y-2">
                         <h1 className="text-4xl font-medium tracking-tight">Create an account</h1>
-                        <p className="text-lg text-[#717184]">Let's begin your 30-day risk-free trial</p>
+                        <p className="text-lg text-[#717184]">Let&apos;s begin your 30-day risk-free trial</p>
                     </div>
                     {/* Form */}
                     <form className="space-y-4">
@@ -53,8 +53,9 @@ export default function SignupPage() {
                             </button>
                         </div>
                         <p className="text-center text-sm text-[#717184]">
-                            Have an account already? <a href="/signin" className="text-[#FF6E00] hover:underline">Sign in</a>
+                            Have an account already? <Link href="/signin" className="text-[#FF6E00] hover:underline">Sign in</Link>
                         </p>
+
                     </form>
                 </div>
             </div>
@@ -64,7 +65,7 @@ export default function SignupPage() {
                 <div className="space-y-16">
                     <h2 className="text-3xl font-medium tracking-tight">~ With Coinbank, multi-signature digital wallet, you can start saving.</h2>
                     <p className="text-lg leading-relaxed">
-                        If you're interested in getting involved in the booming cryptocurrency industry and want to own your own digital coins, then sign up with us today!
+                        If you are interested in getting involved in the booming cryptocurrency industry and want to own your own digital coins, then sign up with us today!
                     </p>
 
                     <div className="flex flex-col lg:flex-row gap-8 pt-4">

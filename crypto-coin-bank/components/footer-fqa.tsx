@@ -57,42 +57,7 @@ export default function Footer() {
                 {/* Wrapper to Ensure Same Width */}
                 <div className="max-w-[1120px] mx-auto space-y-16">
 
-                    {/* Sign In Banner (Orange Section) */}
-                    <div className="flex flex-col md:flex-row items-start p-6 md:p-[88px_64px_112px] w-full lg:w-[1120px] bg-[#FF6E00] rounded-[24px] lg:h-[355px] lg:p-[64px_64px_80px]">
-                        <div className="flex flex-col md:flex-row items-start justify-between w-full gap-8">
-                            {/* Left Side: Text & Button */}
-                            <div className="space-y-3">
-                                <div className="flex flex-col items-start text-white">
-                                    <h2 className="text-3xl md:text-[40px] font-medium leading-[140%] tracking-[-0.01em] font-inter">
-                                        Sign in now
-                                        <span className="text-[#FFE0C8]"> to get <br /> $50 worth of</span> <br />
-                                        <span className="text-[#FFE0C8]">crypto</span>
-                                    </h2>
-                                </div>
-                                <button className="bg-white text-[#FF6E00] px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition">
-                                    Get Started
-                                </button>
-                            </div>
 
-                            {/* Right Side: Phone Image & QR Code */}
-                            <div className="flex flex-col md:flex-row items-center gap-8">
-                                <div className="flex flex-col items-center flex-none order-1 md:order-2">
-                                    <div className="pb-5">
-                                        <Image src="/qr.svg" alt="QR Code" width={140} height={140} className="mx-auto" />
-                                    </div>
-                                    <Image src="/arr.svg" alt="Arr" width={16} height={32} className="mx-auto" />
-                                    <div className="pt-4 text-[#FFFFFF] text-sm text-center">
-                                        Scan to download <br /> Coinbank wallet
-                                    </div>
-                                </div>
-
-                                {/* Phone Image */}
-                                <div className="relative w-full md:w-[300px] h-[287px] pl-4 flex items-center justify-center order-2 md:order-1">
-                                    <Image src="/phone.svg" alt="Phone" width={320} height={400} className="object-contain" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     {/* Footer Links (White Section) */}
                     <div className="flex flex-col md:flex-row items-start p-6 md:p-[64px_32px_58px_64px] w-full lg:w-[1120px] bg-white rounded-[24px]">
@@ -123,9 +88,9 @@ export default function Footer() {
                                         {/* Social Icons */}
                                         <div className="flex gap-6 text-gray-400">
                                             {[1, 2, 3, 4, 5].map((num) => (
-                                                <Link key={num} href="#" className="hover:text-gray-600">
+                                                <a key={num} href="#" className="hover:text-gray-600">
                                                     <Image src={`/s${num}.svg`} alt="" width={20} height={20} />
-                                                </Link>
+                                                </a>
                                             ))}
                                         </div>
                                     </div>
@@ -138,9 +103,9 @@ export default function Footer() {
                                         <ul className="space-y-2">
                                             {section.links.map((link, i) => (
                                                 <li key={i}>
-                                                    <Link href={link.href} className="text-gray-500 hover:text-gray-900">
+                                                    <a href={link.href} className="text-gray-500 hover:text-gray-900">
                                                         {link.name}
-                                                    </Link>
+                                                    </a>
                                                 </li>
                                             ))}
                                         </ul>

@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Footer from '../../components/footer';
-import Nav from '../../components/nav';
+import Nav from '../../components/Nav';
 
 
 const categories = ["Trending", "Crypto and Blockchain", "Investment", "Markets", "Web 3", "Press Release"]
@@ -103,15 +103,7 @@ const posts = [
 export default function BlogPage() {
     const [currentSlide, setCurrentSlide] = useState(0)
     const [currentPage, setCurrentPage] = useState(1)
-    const postsPerPage = 9
 
-    const nextSlide = () => {
-        setCurrentSlide((prev) => (prev + 1) % featuredPosts.length)
-    }
-
-    const prevSlide = () => {
-        setCurrentSlide((prev) => (prev - 1 + featuredPosts.length) % featuredPosts.length)
-    }
 
     return (
         <div className="min-h-screen flex flex-col">
@@ -234,4 +226,3 @@ export default function BlogPage() {
         </div>
     )
 }
-

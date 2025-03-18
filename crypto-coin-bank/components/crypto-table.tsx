@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { useEffect, useState } from "react"
 import { Line, LineChart, ResponsiveContainer } from "recharts"
-
+import Image from "next/image"
 interface Coin {
   id: string
   symbol: string
@@ -92,7 +92,13 @@ export default function CryptoTable() {
                 <TableRow key={coin.id} className="text-sm sm:text-base">
                   <TableCell className="py-4">
                     <div className="flex items-center gap-2">
-                      <img src={coin.image || "/placeholder.svg"} alt={coin.name} className="h-6 w-6 sm:h-8 sm:w-8" />
+                      <Image
+                        src={coin.image || "/placeholder.svg"}
+                        alt={coin.name}
+                        width={32}
+                        height={32}
+                        className="h-6 w-6 sm:h-8 sm:w-8"
+                      />
                       <div>
                         <div className="font-medium">{coin.name}</div>
                         <div className="text-xs sm:text-sm text-muted-foreground uppercase">{coin.symbol}</div>

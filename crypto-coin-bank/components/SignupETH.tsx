@@ -1,6 +1,7 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
+import Image from "next/image"
 import { useEffect, useState } from "react"
 import { Line, LineChart, ResponsiveContainer } from "recharts"
 
@@ -45,7 +46,7 @@ export default function TopCoins() {
                             <CardContent className="p-4 ">
                                 {/* Coin Header */}
                                 <div className="flex items-center ">
-                                    <img src={coin.image || "/placeholder.svg"} alt={coin.name} className="h-6 w-6" />
+                                    <Image src={coin.image || "/placeholder.svg"} alt={coin.name} className="h-6 w-6" />
                                     <div className="font-medium">{coin.name}</div>
                                     <div className="text-sm text-muted-foreground uppercase">{coin.symbol}</div>
                                 </div>

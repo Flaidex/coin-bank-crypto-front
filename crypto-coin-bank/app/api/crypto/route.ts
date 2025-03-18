@@ -2,8 +2,8 @@ import { NextResponse } from "next/server";
 
 // Cache settings (2 minutes)
 const CACHE_DURATION = 120 * 1000;
-let cachedData: Record<string, any> = {};
-let lastFetchedTime: Record<string, number> = {};
+const cachedData: Record<string, unknown> = {};
+const lastFetchedTime: Record<string, number> = {};
 
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
